@@ -1,3 +1,4 @@
+
 # NoSQL Data Synchronization System
 
 ## Project Overview
@@ -26,4 +27,32 @@ The system maintains consistency across these databases by:
 
 ```bash
 pip install pandas psycopg2-binary pymongo
+```
 
+## How to Run the Project
+
+### Step 1: Prepare the input file
+Place your `student_course_grades.csv` file in the root directory (same location as `main.py`).
+
+### Step 2: Start required services
+Ensure the following services are running:
+- **MongoDB** on `localhost:27017`
+- **PostgreSQL** on `localhost:5432` with a database named `nosql_db`
+- **Apache Pig** installed and accessible via terminal (`pig -x local` should work)
+
+### Step 3: Run the Python script
+In your terminal, navigate to the project directory and run:
+
+```bash
+python main.py
+```
+
+The script will:
+- Read the input CSV
+- Perform inserts/updates in PostgreSQL, MongoDB and PIG.
+- Log all operations in `oplog.csv`
+- Synchronize data across systems with conflict resolution
+
+---
+
+```
