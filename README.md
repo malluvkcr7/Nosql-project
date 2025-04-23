@@ -55,4 +55,3 @@ The script will:
 
 ---
 
-```
