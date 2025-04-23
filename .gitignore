@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.log
+pig_data/
+empty.csv
+*.json
